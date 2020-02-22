@@ -8,7 +8,11 @@ WORKDIR /srv/app
 
 VOLUME /srv/app
 
+COPY server.json /srv/app/config/production/
+
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
+
+ENV NODE_ENV=production
 
 CMD ["strapi", "develop"]

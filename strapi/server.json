@@ -1,0 +1,18 @@
+{
+    "host": "localhost",
+    "port": "${process.env.PORT || 1337}",
+    "production": true,
+    "proxy": {
+        "enabled": "${process.env.PROXY_ENABLED || false}",
+        "ssl": "${process.env.PROXY_SSL || false}",
+        "host": "${process.env.PROXY_DOMAIN || strapi.mydomain.com}",
+        "port": "${process.env.PROXY_PORT || 8443}",
+      },
+    "cron": {
+      "enabled": false
+    },
+    "admin": {
+      "autoOpen": false
+    }
+  }
+  
