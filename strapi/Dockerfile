@@ -9,10 +9,11 @@ WORKDIR /srv/app
 VOLUME /srv/app
 
 COPY server.json /srv/app/config/production/
+COPY server.json /srv/app/config/development/
 
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-ENV NODE_ENV=production
+ENV NODE_ENV=development
 
 CMD ["strapi", "develop"]
