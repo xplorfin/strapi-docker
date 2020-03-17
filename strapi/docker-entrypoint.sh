@@ -36,6 +36,9 @@ if [ "$1" = "strapi" ]; then
 
     fi
 
+    echo "Extra Strapi Plugins"
+    strapi install documentation
+
     echo "Gotta run setup"
     npm run setup
     npm run build
