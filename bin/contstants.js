@@ -1,6 +1,6 @@
 'use strict';
 
-const ORG = process.env.ORG || 'strapi';
+const ORG = process.env.ORG || 'xplorfin';
 const REPO = 'strapi/strapi';
 const BASE_IMAGE_NAME = `${ORG}/base`;
 const STRAPI_IMAGE_NAME = `${ORG}/strapi`;
